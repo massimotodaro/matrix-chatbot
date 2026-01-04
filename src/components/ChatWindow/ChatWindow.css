@@ -1,0 +1,73 @@
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--terminal-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--message-gap);
+}
+
+.message {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+  animation: message-appear 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Message fade-in animation */
+@keyframes message-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-prefix {
+  color: var(--matrix-green-dim);
+}
+
+.message-content {
+  color: var(--matrix-green);
+}
+
+.message-user {
+  text-shadow: var(--glow-small);
+}
+
+.message-user .message-prefix {
+  color: var(--matrix-green);
+}
+
+.message-user .message-content {
+  color: var(--matrix-green-bright);
+}
+
+.message-bot {
+  text-shadow: var(--glow-small);
+}
+
+.message-system {
+  color: var(--matrix-green-dim);
+  font-style: italic;
+}
+
+.message-system .message-prefix {
+  color: var(--matrix-green-dark);
+}
+
+.message-system .message-content {
+  color: var(--matrix-green-dim);
+}
+
+/* Disable animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .message {
+    animation: none;
+  }
+}

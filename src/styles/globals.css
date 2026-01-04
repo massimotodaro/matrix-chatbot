@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  /* Matrix Colors */
+  --matrix-green: #00ff00;
+  --matrix-green-dark: #003300;
+  --matrix-green-dim: #00aa00;
+  --matrix-green-bright: #00ff41;
+  --matrix-black: #0d0d0d;
+  --matrix-black-pure: #000000;
+  --matrix-white: #ffffff;
+
+  /* Glow Effects */
+  --glow-small: 0 0 5px var(--matrix-green);
+  --glow-medium: 0 0 10px var(--matrix-green), 0 0 20px var(--matrix-green-dark);
+  --glow-large: 0 0 10px var(--matrix-green), 0 0 20px var(--matrix-green), 0 0 40px var(--matrix-green-dark);
+
+  /* Typography */
+  --font-mono: 'Fira Code', 'SF Mono', 'Monaco', 'Consolas', 'Courier New', monospace;
+
+  /* Spacing */
+  --terminal-padding: 16px;
+  --message-gap: 12px;
+
+  /* Z-index layers */
+  --z-rain: 0;
+  --z-terminal: 10;
+  --z-crt: 1000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--matrix-black-pure);
+  color: var(--matrix-green);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--matrix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--matrix-green-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--matrix-green-dim);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--matrix-green);
+  color: var(--matrix-black);
+}
+
+/* Focus styling */
+:focus {
+  outline: 1px solid var(--matrix-green);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--matrix-green);
+  outline-offset: 2px;
+}
