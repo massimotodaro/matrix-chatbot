@@ -1,4 +1,4 @@
-import { useEffect, useRef, RefObject } from 'react';
+import { useEffect, useRef, type RefObject } from 'react';
 
 export function useAutoScroll<T extends HTMLElement>(
   dependency: unknown

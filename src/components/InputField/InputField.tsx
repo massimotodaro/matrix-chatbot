@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type KeyboardEvent } from 'react';
 import './InputField.css';
 
 interface InputFieldProps {
